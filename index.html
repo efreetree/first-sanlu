@@ -2,17 +2,95 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>我的 GitHub 首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>月光如水 - 三芦草堂</title>
     <style>
-        body { font-family: sans-serif; text-align: center; padding-top: 50px; background-color: #f4f4f9; }
-        h1 { color: #2c3e50; }
-        p { color: #7f8c8d; }
+        /* 全局样式：营造深夜宁静感 */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /* 深蓝到黑色的渐变，模拟夜空 */
+            background: radial-gradient(circle at top, #1e3c72 0%, #112244 50%, #000428 100%);
+            color: #e0e0e0;
+            font-family: "Microsoft YaHei", "PingFang SC", serif;
+            overflow: hidden;
+        }
+
+        /* 磨砂玻璃质感的容器 */
+        .container {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px); /* 模糊效果 */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            max-width: 600px;
+            width: 90%;
+        }
+
+        /* 标题：增加一点点月光般的阴影 */
+        h1 {
+            font-size: 2.5em;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+            color: #f0f4f8;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #b0c4de;
+        }
+
+        /* 装饰用的小圆圈，模拟远处的星光或萤火 */
+        .dot {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float 10s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); opacity: 0.2; }
+            50% { transform: translateY(-20px); opacity: 0.5; }
+        }
+
+        /* 简单的按钮样式 */
+        .btn {
+            margin-top: 30px;
+            display: inline-block;
+            padding: 10px 30px;
+            border: 1px solid #b0c4de;
+            color: #b0c4de;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            color: white;
+        }
     </style>
 </head>
 <body>
-    <h1>你好，GitHub Pages！</h1>
-    <p>这是我亲手创建并托管在 GitHub 上的第一个网页。</p>
-    <hr>
-    <p>下一步：我要尝试让全世界都能访问它。</p>
+    <div class="dot" style="top: 10%; left: 15%; width: 5px; height: 5px;"></div>
+    <div class="dot" style="top: 25%; left: 80%; width: 3px; height: 3px; animation-delay: 2s;"></div>
+    <div class="dot" style="top: 70%; left: 20%; width: 4px; height: 4px; animation-delay: 4s;"></div>
+
+    <div class="container">
+        <h1>月光如水</h1>
+        <p>心如止水，澄澈空明</p>
+        <p>欢迎来到三芦草堂的数字化空间。<br>在这里，我们探讨身心健康、传统智慧与现代生活的平衡。</p>
+        <a href="#" class="btn">开启冥想之旅</a>
+    </div>
 </body>
 </html>
